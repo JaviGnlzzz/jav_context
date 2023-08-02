@@ -1,0 +1,116 @@
+@font-face {
+    font-family: normal;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: light;
+    src: url(../fonts/Poppins-Light.ttf);
+}
+
+*{
+    user-select: none;
+}
+
+:root{
+    --black-color: rgba(8, 8, 8, 0.877);
+    --white-color: rgba(231, 231, 231, 0.863);
+    --red-color: rgba(235, 104, 104, 0.5);
+    --active-voice: rgba(245, 97, 97, 0.418);
+    --grey-color: rgba(201, 200, 200, 0.034);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.interfaz-context{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.container-context{
+    background-color: var(--black-color);
+    box-shadow: 0 0 .25vw var(--black-color);
+    margin-right: 5vw;
+    padding: .8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5vw;
+    border-radius: .5vw;
+    min-width: 10vw;
+    max-width: 12.5vw;
+}
+
+.title-context{
+    width: 100%;
+    max-height: 3vw;
+    background-color: var(--red-color);
+    box-shadow: 0 0 .4vw var(--red-color);
+    padding: .25vw;
+    border-radius: .25vw;
+    font-family: normal;
+    font-size: .75vw;
+    color: var(--white-color);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container-items-context{
+    width: 100%;
+    height: 100%;
+    padding: .35vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5vw;
+    border-radius: .2vw;
+}
+
+.item-context{
+    opacity: 0;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: .2vw;
+    padding: .25vw .5vw;
+    background-color: rgba(226, 52, 52, 0.164);
+    border-radius: .25vw;
+    animation: fadeIn .25s .15s forwards;
+    transition: .25s;
+}
+
+.item-context .title-item{
+    font-family: normal;
+    font-size: .75vw;
+    color: rgba(255, 255, 255, 0.781);
+    text-transform: capitalize;
+}
+
+.item-context .description-item{
+    color: grey;
+    font-family: light;
+    font-size: .65vw;
+}
+
+.item-context:hover{
+    cursor: pointer;
+    background-color: var(--active-voice);
+}
+
+.show{
+    animation: fadeInRight .3s;
+}
+
+.hide{
+    animation: fadeOutRight .3s;
+}
